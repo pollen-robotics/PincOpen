@@ -9,7 +9,7 @@ This work is licensed under a
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
-# Pinc'Open project presentation
+# Pinc'Open project
 A low cost (~25€) and open source parallel-finger gripper, derived from Reachy 2's gripper
 
 ## Reachy 2 "Pincette" gripper
@@ -35,7 +35,7 @@ To make this possible, here are the main areas of focus:
 - Find a trick to imitate a torque limitation while using position control on a motor that doesn't have this feature. Otherwise the motor burns (or turn off thanks to security) or the plastic mechanical part can break...
 
 
-# Usefull sections
+# Build Resources
 ## BOM (Bill Of Materials)
 The list of all needed components is available here:  
 [PincOpen BOM](https://docs.google.com/spreadsheets/d/1iEKxfsqo3RnKw0QtdLJ2hEtYNDy2LInxrnCFLAhpxHk/edit?usp=sharing)  
@@ -71,6 +71,8 @@ Here is an assembly guide to explain how to print all the needed custom parts an
 First of all, please install the pypot library, updated with the feetech motors:  
 https://github.com/pollen-robotics/pypot/tree/support-feetech-sts3215
 
+
+# Project Updates & Community
 ## Updates history
 [Updates history](/docs/changelog.md)  
 
