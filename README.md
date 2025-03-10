@@ -27,6 +27,7 @@ A low cost (~25€) and open source parallel-finger gripper, derived from Reachy
 - [Project Updates & Community](#project-updates--community)
     - [Updates history](#updates-history)
     - [Project posts](#project-posts)
+    - [To Do List](#to-do-list)
     - [FAQ](#faq)
     - [Contact](#contact)
     - [Thank you](#thank-you)
@@ -88,12 +89,20 @@ Here is an assembly guide to explain how to print all the needed custom parts an
 
 ## How to flash and test the gripper
 First of all, please install the pypot library, updated with the feetech motors:  
-https://github.com/pollen-robotics/pypot/tree/support-feetech-sts3215
+https://github.com/pollen-robotics/pypot/tree/support-feetech-sts3215  
+
+Then, please refer to the [flash&test notebook](/flash_and_tests/flash_test.ipynb)
 
 
 # Project Updates & Community
 ## Updates history
 [Updates history](/docs/changelog.md)  
+
+## To Do List
+- Video showing the advantages of this more complex mechanism
+- Add content to make a soft and adhesive tip cheaply and easily
+- Technical explaination about how it was designed
+- Non-downsized version for humanoid arms (like Reachy)
 
 ## Project posts
 WIP 
