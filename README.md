@@ -9,8 +9,27 @@ This work is licensed under a
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
+
 # Pinc'Open project
 A low cost (~25€) and open source parallel-finger gripper, derived from Reachy 2's gripper
+
+## Table of content
+
+- [Pinc'Open Presentation](#pincopen-project)
+    - [Reachy 2 "Pincette" gripper](#reachy-2-pincette-gripper)
+    - [What is Pinc'Open](#what-is-pincopen)
+- [Build Resources](#build-resources)
+    - [BOM (Bill Of Materials)](#bom-bill-of-materials)
+    - [STL Files and Onshape document](#stl-files-and-onshape-document)
+    - [Configure the motor before assembly](#configure-the-motor-before-assembly)
+    - [Assembly Guide](#assembly-guide)
+    - [How to flash and test the gripper](#how-to-flash-and-test-the-gripper)
+- [Project Updates & Community](#project-updates--community)
+    - [Updates history](#updates-history)
+    - [Project posts](#project-posts)
+    - [FAQ](#faq)
+    - [Contact](#contact)
+    - [Thank you](#thank-you)
 
 ## Reachy 2 "Pincette" gripper
 The Pincette v1.0 gripper releases at the same time as Reachy 2 is a two parallel fingers hand which has been designed for versatility and accurate strong grasping.  
