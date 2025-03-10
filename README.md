@@ -47,7 +47,9 @@ STL and Steps files can be found [here](/cad/)
 
 Everyone can access to the Onshape document too:   
 [Link onshape](https://cad.onshape.com/documents/96518c699fd03eea508b06d3/w/d5f95a6266b027d84ae48634/e/e41e675b82a4f671f01336e0)  
-![pincopen onshape picture](/assets/images/pincopen_onshape.png)
+![pincopen onshape picture](/assets/images/pincopen_onshape.png)  
+
+Note that you can set a configuration in the assembly, like the default assembly, or with the interface part for SO-ARM100, or the configuration for camera mounting.
 
 ## Configure the motor before assembly
 To configure the motor as it should be, please first clone & install [Lerobot library](https://github.com/huggingface/lerobot/tree/main).
