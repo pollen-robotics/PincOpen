@@ -9,6 +9,7 @@ This work is licensed under a
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
 [cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
+[![Watch the video](https://img.youtube.com/vi/unkeuLdbagM/maxresdefault.jpg)](https://www.youtube.com/watch?v=unkeuLdbagM)
 
 # Pinc'Open project
 [Pinc'Open](https://github.com/pollen-robotics/PincOpen/tree/main) is a low-cost (~25€) and open-source parallel-finger gripper, derived from [Pollen Robotics Reachy 2](https://www.pollen-robotics.com/reachy/)'s gripper
