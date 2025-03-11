@@ -91,7 +91,7 @@ Here is an assembly guide to explain how to print all the needed custom parts an
 First of all, please install the pypot library, updated with the Feetech motors:  
 https://github.com/pollen-robotics/pypot/tree/support-feetech-sts3215  
 
-Then, please refer to the [flash&test notebook](https://github.com/pollen-robotics/PincOpen/tree/main/flash_and_tests))
+Then, please refer to the [flash&test notebook](https://github.com/pollen-robotics/PincOpen/tree/main/flash_and_tests)
 
 
 # Project Updates & Community
