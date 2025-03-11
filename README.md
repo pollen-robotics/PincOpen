@@ -63,7 +63,7 @@ The list of all needed components is available here:
 There is the standalone PincOpen gripper BOM (~25€), then optional components like the interface with the [SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100) project, or a Realsense camera stand for example.
 
 ## STL Files and Onshape document
-STL and Steps files can be found [here](/cad/)  
+STL and Steps files can be found [here](https://github.com/pollen-robotics/PincOpen/tree/main/cad)  
 
 Everyone can access the Onshape document too:   
 [Link Onshape](https://cad.onshape.com/documents/96518c699fd03eea508b06d3/w/d5f95a6266b027d84ae48634/e/e41e675b82a4f671f01336e0)  
@@ -91,7 +91,7 @@ Here is an assembly guide to explain how to print all the needed custom parts an
 First of all, please install the pypot library, updated with the Feetech motors:  
 https://github.com/pollen-robotics/pypot/tree/support-feetech-sts3215  
 
-Then, please refer to the [flash&test notebook](/flash_and_tests/flash_test.ipynb)
+Then, please refer to the [flash&test notebook](https://github.com/pollen-robotics/PincOpen/tree/main/flash_and_tests))
 
 
 # Project Updates & Community
