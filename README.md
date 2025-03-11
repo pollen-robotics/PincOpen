@@ -11,7 +11,7 @@ This work is licensed under a
 
 
 # Pinc'Open project
-A low-cost (~25€) and open-source parallel-finger gripper, derived from [Pollen Robotics Reachy 2](https://www.pollen-robotics.com/reachy/)'s gripper
+[Pinc'Open](https://github.com/pollen-robotics/PincOpen/tree/main) is a low-cost (~25€) and open-source parallel-finger gripper, derived from [Pollen Robotics Reachy 2](https://www.pollen-robotics.com/reachy/)'s gripper
 
 ## Table of contents
 
