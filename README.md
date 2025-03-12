@@ -39,7 +39,10 @@ The aim of this project is to make robotic manipulation more accessible, so that
 The quality of movement, mechanical strength and precision may not be as good as an industrial product, but a 2-finger parallel robotic gripper can be built for less than 25€! And we'll see that the performance is still good.  
 ![PincOpen_weight](/assets/images/pincopen_weight.jpg)
 
-The secondary goal is to make this gripper compatible with the [SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100) open-source arm, so that the same motor as the current gripper can be used on our Pinc'Open. So the 25€ includes a motor that is already included in the $100 of the SO-ARM100.  
+The secondary goal is to make this gripper compatible with the [SO-ARM100](https://github.com/TheRobotStudio/SO-ARM100) open-source arm, so that the same motor as the current gripper can be used on our Pinc'Open. So the 25€ includes a motor that is already included in the $100 of the SO-ARM100.
+
+What's more, the tip is interchangeable! That way, you can fit exactly what you need for your particular application.  
+![removable_tip](/assets/images/removable_tip.png)
 
 ## Reachy 2 "Pincette" gripper
 The Pincette v1.0 gripper, released at the same time as [Reachy 2](https://www.pollen-robotics.com/reachy/), is a two-parallel-finger hand designed for versatility and accurate, strong grasping.  
