@@ -104,12 +104,11 @@ Then, please refer to the [flash&test notebook](https://github.com/pollen-roboti
 
 ## To Do List
 - Video showing the advantages of this more complex mechanism
-- Add content to make a soft and adhesive tip cheaply and easily
 - Technical explanation about how it was designed
 - Non-downsized version for humanoid arms (like Reachy2)
 
 ## Project posts
-WIP 
+- [Fingertips for better grip](/docs/grip_tip.md)
 
 ## FAQ
 WIP
