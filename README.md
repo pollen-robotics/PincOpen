@@ -106,6 +106,7 @@ Then, please refer to the [flash&test notebook](https://github.com/pollen-roboti
 - Video showing the advantages of this more complex mechanism
 - Technical explanation about how it was designed
 - Non-downsized version for humanoid arms (like Reachy2)
+- New camera mounting supports
 
 ## Project posts
 - [Fingertips for better grip](/docs/grip_tip.md)
