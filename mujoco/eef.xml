@@ -1,0 +1,66 @@
+<mujoco model="eef">
+    <compiler angle="radian" coordinate="local" meshdir="assets/" texturedir="textures/"/>
+    
+    <asset>
+        <mesh name="base" file="base.stl"/>
+        <mesh name="left-proximal" file="left-proximal.stl"/>
+        <mesh name="left-distal" file="left-distal.stl"/>
+        <mesh name="right-proximal" file="right-proximal.stl"/>
+        <mesh name="right-distal" file="right-distal.stl"/>
+    </asset>
+    <default>
+        <default class="ground">
+          <geom type="plane" size="10 10 0.1" rgba="0.8 0.8 0.8 1"/>
+        </default>
+        <default class="visual">
+          <geom type="mesh" contype="0" conaffinity="0" density="0" group="2"/>
+        </default>
+        <default class="collision">
+          <geom group="3" type="mesh" contype="0" conaffinity="0"/>
+        </default>
+    </default>
+    <worldbody>
+        <geom name="ground" class="ground" pos="0 0 -0.1"/>
+        <light directional="true" diffuse="0.8 0.8 0.8" specular="0.2 0.2 0.2" pos="0 0 5" dir="0 0 -1"/>
+        <light directional="true" diffuse="0.4 0.4 0.4" specular="0.1 0.1 0.1" pos="5 0 2" dir="-1 0 -0.5"/>
+        <body name="base">
+            <inertial pos="0 0 0" mass="0.5" diaginertia="0.1 0.1 0.1"/>
+            <geom class="visual" mesh="base"/>
+            <geom class="collision" mesh="base"/>
+            <body name="left-proximal" pos="0.053492 0.0325 -0.005">
+                <joint name="left_proximal_joint" type="hinge" axis="0 0 1" pos="0 0 0" limited="true" range="-0.77 0.77"/>
+                <inertial pos="0 0 0" mass="0.2" diaginertia="0.05 0.05 0.05"/>
+                <geom class="visual" mesh="left-proximal"/>
+                <geom class="collision" mesh="left-proximal"/>
+                <body name="left-distal" pos="0.037848 0.012944 -0.001">
+                    <joint name="left_distal_joint" type="hinge" axis="0 0 1" pos="0 0 0"/>
+                    <inertial pos="0 0 0" mass="0.1" diaginertia="0.02 0.02 0.02"/>
+                    <geom class="visual" mesh="left-distal"/>
+                    <geom class="collision" mesh="left-distal"/>
+                </body>
+            </body>
+            <body name="right-proximal" pos="0.053492 -0.0325 -0.005">
+                <joint name="right_proximal_joint" type="hinge" axis="0 0 1" pos="0 0 0"/>
+                <inertial pos="0 0 0" mass="0.2" diaginertia="0.05 0.05 0.05"/>
+                <geom class="visual" mesh="right-proximal"/>
+                <geom class="collision" mesh="right-proximal"/>
+                <body name="right-distal" pos="0.037848 -0.012944 -0.001">
+                    <joint name="right_distal_joint" type="hinge" axis="0 0 1" pos="0 0 0"/>
+                    <inertial pos="0 0 0" mass="0.1" diaginertia="0.02 0.02 0.02"/>
+                    <geom class="visual" mesh="right-distal"/>
+                    <geom class="collision" mesh="right-distal"/>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+    
+    <equality>
+        <joint joint1="left_proximal_joint" joint2="left_distal_joint" polycoef="0 -1 0 0 0"/>
+        <joint joint1="right_proximal_joint" joint2="right_distal_joint" polycoef="0 -1 0 0 0"/>
+        <joint joint1="left_distal_joint" joint2="right_distal_joint" polycoef="0 -1 0 0 0"/>
+    </equality>
+    
+    <actuator>
+        <position name="motor" joint="left_proximal_joint" kp="100" dampratio="1" forcelimited="false" />
+    </actuator>
+</mujoco>
