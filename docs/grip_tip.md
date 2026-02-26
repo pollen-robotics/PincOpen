@@ -11,14 +11,14 @@ The tip of the finger can be **flattened**, allowing you to:
 
 To secure the folded flaps in place, you can add a **thin strip of tape or band** around the perimeter of the tip. This helps maintain a clean and durable finish.
 
-![tip_stencil](/assets/images/tip_stencil.png)
+![tip_stencil](../assets/images/tip_stencil.png)
 
 
 ### Best Performing Material So Far: **3M GM400**
 
 After testing various grip-enhancing materials, our favorite so far is the **3M GM400**
 
-![gm400](/assets/images/gm400.png)
+![gm400](../assets/images/gm400.png)
 
 - Strong **dry adhesion** (not sticky, but highly grippy)
 - Excellent **friction**, even on smooth objects
@@ -38,7 +38,7 @@ You can also 3D print the fingertips in **TPU** with a **moderate infill (30–5
 
 Combining TPU with an adhesive grip layer offers a great balance between **compliance and friction**.
 
-![tpu_tip](/assets/images/tpu_tip_print.png)
+![tpu_tip](../assets/images/tpu_tip_print.png)
 
 
 ### Personal Preference: Rigid Base + Grip Layer
