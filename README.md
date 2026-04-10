@@ -102,10 +102,14 @@ Then, please refer to the [flash&test notebook](https://github.com/pollen-roboti
 ## Updates history
 [Updates history](/docs/changelog.md)  
 
+## Community projects
+- ROS2 PincOpen Driver - School of Engineering and Computing, Christopher Newport University - [[Github](https://github.com/CNURobotics/pinc_open_driver)]. 
+- MuJoCo Simulation Support (PR) - [[Github](https://github.com/pollen-robotics/PincOpen/pull/6)] 
+- ICRA 2026 Smart grasping using embedded 3D force (tactile) sensing from Melexis - Milan Amighi, Constantin Scholz and Bram Vanderborght (Brubotics - VUB & imec), in collaboration with Melexis - [[Tutorial Website](https://mech.vub.ac.be/multibody/ICRA_conference_workshop.htm)]
+
 ## To Do List
 - Video showing the advantages of this more complex mechanism
 - Technical explanation about how it was designed
-- Non-downsized version for humanoid arms (like Reachy2)
 - New camera mounting supports
 
 ## Project posts
