@@ -91,6 +91,9 @@ Here is an assembly guide to explain how to print all the needed custom parts an
 [=> Assembly Guide](/docs/PincOpen_Assembly_Instructions.pdf)  
 ![Assembly Example](/assets/images/assembly_example.png)  
 
+There is also a guide about how to build an Intel Realsense D405 camera mount here:  
+[=> Camera Mount Assembly](/docs/camera_mount_assemby.md)
+
 ## How to flash and test the gripper
 First of all, please install the pypot library, updated with the Feetech motors:  
 https://github.com/pollen-robotics/pypot/tree/support-feetech-sts3215  
