@@ -34,6 +34,8 @@ However, the cost is quite high and the quantity is probably too much for just c
 
 A simple alternative is to use the rubberized fingertips from **3M work gloves**:
 
+![3m-glove](https://huggingface.co/datasets/zuoxingdong/lekiwi-blog-assets/resolve/main/gripper-fingertip-mod-1x3_260622.jpg)
+
 - **Cheap**
 - **Grippy** on glossy surfaces
 - **Not sticky**, so objects release cleanly
