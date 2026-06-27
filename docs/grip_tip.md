@@ -30,6 +30,18 @@ However, the cost is quite high and the quantity is probably too much for just c
 > ⚠️ _Note: We have **no affiliation with 3M** — this is an objective recommendation based on hands-on testing._
 
 
+### Cheap Alternative: 3M Glove Fingertips
+
+A simple alternative is to use the rubberized fingertips from **3M work gloves**:
+
+- **Cheap**
+- **Grippy** on glossy surfaces
+- **Not sticky**, so objects release cleanly
+- Easy to **cut and attach**
+
+More details in [Mobile Manipulation with LeKiwi and PincOpen - Grippy fingertips from a 3M glove](https://huggingface.co/blog/zuoxingdong/mobile-manipulation-lekiwi-pincopen#grippy-fingertips-from-a-3m-glove)
+
+
 ### TPU Option – Deformable but Solid
 
 You can also 3D print the fingertips in **TPU** with a **moderate infill (30–50%)**, resulting in:
