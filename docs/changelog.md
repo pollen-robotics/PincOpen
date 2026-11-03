@@ -12,3 +12,7 @@
 ### Fixed
 - BoM mistakes
 
+## MOBILAB-UDESC fork - 03/11/2026
+### Added
+- `Interface_G1`: adapter for the Unitree G1 wrist clamp (STL, plate STEP, build script in `cad/g1/`)
+- `docs/g1_wrist_interface.md`: G1 wrist dimensions, sources, wiring and fitting notes

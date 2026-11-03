@@ -1,6 +1,7 @@
 # Python environments (see dex1_bridge/README.md)
 .venv/
 .venv-dex1/
+.venv-cad/
 __pycache__/
 
 # Jupyter

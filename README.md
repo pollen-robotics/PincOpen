@@ -52,6 +52,10 @@ python test_dex1_sweep.py           # Unitree's sine sweep
 ```
 Details in [dex1_bridge/README.md](dex1_bridge/README.md).
 
+## Mount it on a Unitree G1 wrist
+
+[`cad/stl/Interface_G1.stl`](cad/stl/Interface_G1.stl) replaces `Interface_ARM100` so the gripper fits the G1 EDU/Flagship wrist clamp in place of the Dex1-1. See [docs/g1_wrist_interface.md](docs/g1_wrist_interface.md) for the dimensions, print settings, wiring, and the checks to do on the robot.
+
 ## Layout
 
 | Path | Content |
@@ -60,6 +64,7 @@ Details in [dex1_bridge/README.md](dex1_bridge/README.md).
 | `notebooks/feetech_test.ipynb` | Configure and test the motor |
 | `notebooks/dex1_bridge_tests.ipynb` | Test the Dex1 bridge |
 | `dex1_bridge/` | Dex1 DDS server, Feetech driver, calibration, test client |
+| `cad/g1/` | Build script for the G1 wrist adapter (`Interface_G1`), and the vendored lerobot G1 plug |
 
 ## License
 
