@@ -6,7 +6,11 @@ This fork adds:
 - a setup for the Feetech motor test notebook, and
 - a bridge that lets Unitree Dex1 software (e.g. `xr_teleoperate --ee dex1`) drive the gripper.
 
+<a href="docs/pincopen_open_close.mp4"><img src="docs/pincopen_open_close.gif" width="360" alt="Pinc'Open opening and closing"></a>
+
 ## Hardware
+
+<img src="docs/pincopen_setup.jpg" width="600" alt="Pinc'Open connected to the Waveshare bus servo adapter">
 
 Connect the motor through a Feetech/Waveshare bus servo adapter and **power the adapter** (USB alone doesn't power the servo). Find the serial port:
 ```bash
@@ -52,7 +56,7 @@ Details in [dex1_bridge/README.md](dex1_bridge/README.md).
 
 | Path | Content |
 |---|---|
-| `cad/`, `docs/` | CAD files and assembly docs from the original project |
+| `cad/`, `docs/` | CAD files and assembly docs from the original project, plus this fork's photo and video |
 | `notebooks/feetech_test.ipynb` | Configure and test the motor |
 | `notebooks/dex1_bridge_tests.ipynb` | Test the Dex1 bridge |
 | `dex1_bridge/` | Dex1 DDS server, Feetech driver, calibration, test client |
