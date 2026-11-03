@@ -1,0 +1,10 @@
+# Python environments (see dex1_bridge/README.md)
+.venv/
+.venv-dex1/
+__pycache__/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store

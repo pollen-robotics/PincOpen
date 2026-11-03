@@ -26,6 +26,8 @@ This work is licensed under a
     - [Configure the motor before assembly](#configure-the-motor-before-assembly)
     - [Assembly Guide](#assembly-guide)
     - [How to flash and test the gripper](#how-to-flash-and-test-the-gripper)
+    - [Use it as a Unitree Dex1 gripper](#use-it-as-a-unitree-dex1-gripper)
+    - [Repository layout](#repository-layout)
 - [Project Updates & Community](#project-updates--community)
     - [Updates history](#updates-history)
     - [Project posts](#project-posts)
@@ -95,10 +97,83 @@ There is also a guide about how to build an Intel Realsense D405 camera mount he
 [=> Camera Mount Assembly](/docs/camera_mount_assemby.md)
 
 ## How to flash and test the gripper
-First of all, please install the pypot library, updated with the Feetech motors:  
-https://github.com/pollen-robotics/pypot/tree/support-feetech-sts3215  
+The gripper is tested and configured from the [Feetech test notebook](notebooks/feetech_test.ipynb), which uses the [pypot library with Feetech support](https://github.com/pollen-robotics/pypot/tree/support-feetech-sts3215).
 
-Then, please refer to the [flash&test notebook](https://github.com/pollen-robotics/PincOpen/tree/main/flash_and_tests)
+**1. Install** (from the repository root, with [uv](https://docs.astral.sh/uv/)):
+```bash
+uv venv --python 3.11 .venv
+uv pip install --python .venv/bin/python \
+  "pypot @ git+https://github.com/pollen-robotics/pypot.git@support-feetech-sts3215" \
+  jupyterlab ipykernel
+```
+
+**2. Connect** the motor through a Feetech/Waveshare bus servo adapter, and power the adapter (the servo needs its own supply, USB alone is not enough). Find the serial port:
+```bash
+ls /dev/cu.usbmodem*      # macOS
+ls /dev/ttyACM* /dev/ttyUSB*   # Linux
+```
+
+**3. Run the notebook:**
+```bash
+.venv/bin/jupyter lab notebooks/feetech_test.ipynb
+```
+In the first cells, set `PORT` to your serial port and `ID` to your motor's ID. Then:
+- Check the positions by hand (torque off): open should read about **-140°**, closed about **0°**. If the values are far off, re-mount the motor horn before going further.
+- Only then run the "flash" cell. It writes the angle limits and torque protection to the motor's EEPROM.
+- Try `open()` and `close()`.
+
+Only one program can use the serial port at a time: shut down the notebook's kernel before running anything else on the gripper.
+
+## Use it as a Unitree Dex1 gripper
+[`dex1_bridge/`](dex1_bridge/) makes the Pinc'Open speak the same DDS interface as Unitree's [Dex1_1 gripper service](https://github.com/unitreerobotics/dex1_1_service), so software written for the Dex1 (for example [xr_teleoperate](https://github.com/unitreerobotics/xr_teleoperate) with `--ee dex1`) drives it without changes.
+
+| | Topic | Message |
+|---|---|---|
+| command | `rt/dex1/<right\|left>/cmd` | `unitree_go MotorCmds_` (`cmds[0].q`) |
+| state | `rt/dex1/<right\|left>/state` | `unitree_go MotorStates_` (`q`, `dq`, `tau_est`) |
+
+Positions use the Dex1 convention: `q = 0` is closed, `q = 5.4` rad is fully open.
+
+**1. Install** a separate Python 3.10 environment (`cyclonedds==0.10.2`, required by the Unitree SDK, has no macOS arm64 wheels for newer Pythons):
+```bash
+uv venv --python 3.10 .venv-dex1
+uv pip install --python .venv-dex1/bin/python pyserial ipykernel matplotlib \
+  "unitree_sdk2py @ git+https://github.com/unitreerobotics/unitree_sdk2_python.git"
+.venv-dex1/bin/python -m ipykernel install --prefix .venv --name pincopen-dex1 --display-name "PincOpen Dex1 (py3.10)"
+source .venv-dex1/bin/activate
+cd dex1_bridge
+```
+
+**2. Calibrate** once per gripper: torque turns off, you close and then open the gripper by hand. This writes `calibration.json`:
+```bash
+python pincopen_dex1_server.py --calibrate --port <serial port> --motor-id <ID>
+```
+
+**3. Run the server:**
+```bash
+python pincopen_dex1_server.py --port <serial port> --side right             # on your computer
+python pincopen_dex1_server.py --port <serial port> --side right -n eth0     # on the robot network
+```
+
+**4. Test it**, either:
+- with the [Dex1 bridge test notebook](notebooks/dex1_bridge_tests.ipynb) (kernel "PincOpen Dex1 (py3.10)", set `PORT` in its setup cell), which runs the bridge itself and checks the motor, the calibration and the whole DDS interface. Stop the server first, since it holds the serial port, and run the cells from top to bottom; or
+- with the server running, from a second terminal:
+  ```bash
+  python test_dex1_sweep.py --watch    # print the state only
+  python test_dex1_sweep.py --q 2.7    # move half open and hold
+  python test_dex1_sweep.py            # Unitree's sine sweep
+  ```
+
+See [dex1_bridge/README.md](dex1_bridge/README.md) for the details: units, command timeout, and the limits of the emulation.
+
+## Repository layout
+| Path | Content |
+|---|---|
+| `cad/` | STL and STEP files |
+| `docs/` | Assembly instructions, camera mount, grip tips, changelog |
+| `notebooks/feetech_test.ipynb` | Configure and test the motor (pypot) |
+| `notebooks/dex1_bridge_tests.ipynb` | Test the Unitree Dex1 bridge |
+| `dex1_bridge/` | Unitree Dex1 DDS bridge: server, Feetech driver, calibration, test client |
 
 
 # Project Updates & Community
